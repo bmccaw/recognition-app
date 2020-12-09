@@ -15,11 +15,15 @@ const StyledForm = styled.form`
 `;
 
 const StyledInputContainer = styled.div`
+  margin: 20px auto;
+  padding: 10px;
   grid-column: 1;
-  grid-row: 1 / 5;
+  grid-row: 1 / 3;
 `;
 
 const StyledRadioContainer = styled.div`
+  margin: 20px auto;
+  padding: 10px;
   grid-column: 2 / 4;
   grid-row: 1 / 3;
 `;
@@ -27,6 +31,10 @@ const StyledRadioContainer = styled.div`
 const StyledImage = styled.img`
   width: 70px;
   height: auto;
+`;
+
+const StyledSelect = styled.select`
+  margin-bottom: 10px;
 `;
 
 const StyledTextArea = styled.textarea`
@@ -123,7 +131,7 @@ const Recognition = () => {
       <StyledInputContainer>
         <h2>Add Recognition</h2>
         <p>Who would you like to recognize?</p>
-        <select
+        <StyledSelect
           name="userId"
           id="userId"
           ref={register({ required: "This input is required." })}
@@ -135,7 +143,7 @@ const Recognition = () => {
               </option>
             );
           })}
-        </select>
+        </StyledSelect>
         <p>Tell us why you think they are a rockstar...</p>
         <StyledTextArea
           name="text"

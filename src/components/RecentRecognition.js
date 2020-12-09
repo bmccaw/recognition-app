@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+
+const StyledWrapper = styled.div`
+  margin-top: 10px;
+`;
 
 const RecentRecognition = () => {
   const [historicData, setHistoricData] = useState([]);
@@ -14,7 +19,7 @@ const RecentRecognition = () => {
         );
 
         const body = await result.json();
-        console.log('history', body);
+        console.log("history", body);
         setHistoricData(body);
       } catch (err) {
         console.log(err);
@@ -24,31 +29,31 @@ const RecentRecognition = () => {
     fetchHistory();
   }, []);
   return (
-  <>
-    <h2>Recent Recognition</h2>
-    <table className="table">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Submitted By</th>
-        <th>Gift Level</th>
-        <th>Text</th>
-      </tr>
-      </thead>
-      <tbody>
-      {historicData.map((history) => {
-        return (
-          <tr key={history.id}>
-            <td>{history.name}</td>
-            <td>{history.submittedBy}</td>
-            <td>{history.level}</td>
-            <td>{history.text}</td>
+    <StyledWrapper>
+      <h2>Recent Recognition</h2>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Submitted By</th>
+            <th>Gift Level</th>
+            <th>Text</th>
           </tr>
-        );
-      })}
-      </tbody>
-    </table>
-  </>
+        </thead>
+        <tbody>
+          {historicData.map((history) => {
+            return (
+              <tr key={history.id}>
+                <td>{history.name}</td>
+                <td>{history.submittedBy}</td>
+                <td>{history.level}</td>
+                <td>{history.text}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </StyledWrapper>
   );
 };
 

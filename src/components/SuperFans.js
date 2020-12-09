@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+
+const StyledWrapper = styled.div`
+  margin-top: 10px;
+`;
 
 const SuperFans = () => {
   const [fansData, setFansData] = useState([]);
@@ -14,8 +19,8 @@ const SuperFans = () => {
         );
 
         const body = await result.json();
-        console.log('superfans', body);
-        setFansData(body)
+        console.log("superfans", body);
+        setFansData(body);
       } catch (err) {
         console.log(err);
         return null;
@@ -24,35 +29,35 @@ const SuperFans = () => {
     fetchSuperfans();
   }, []);
   return (
-    <>
-    <h2>Superfans!</h2>
-    <table className="table">
-      <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Name</th>
-        <th>Gratitude</th>
-        <th>Cheers for Peers</th>
-        <th>Game Changer</th>
-        <th>Raise The Roof!</th>
-      </tr>
-      </thead>
-      <tbody>
-      {fansData.map((fan) => {
-        return (
-          <tr key={fan.rank}>
-            <td>{fan.rank}</td>
-            <td>{fan.name}</td>
-            <td>{fan.level5}</td>
-            <td>{fan.level10}</td>
-            <td>{fan.level20}</td>
-            <td>{fan.level25}</td>
+    <StyledWrapper>
+      <h2>Superfans</h2>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Gratitude</th>
+            <th>Cheers for Peers</th>
+            <th>Game Changer</th>
+            <th>Raise The Roof!</th>
           </tr>
-        );
-      })}
-      </tbody>
-    </table>
-    </>
+        </thead>
+        <tbody>
+          {fansData.map((fan) => {
+            return (
+              <tr key={fan.rank}>
+                <td>{fan.rank}</td>
+                <td>{fan.name}</td>
+                <td>{fan.level5}</td>
+                <td>{fan.level10}</td>
+                <td>{fan.level20}</td>
+                <td>{fan.level25}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </StyledWrapper>
   );
 };
 

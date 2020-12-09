@@ -7,53 +7,59 @@ import RecentRecognition from "./components/RecentRecognition";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  margin: 20px;
+  margin: 20px 100px;
 `;
 
 const StyledHeader = styled.h1`
   text-align: center;
 `;
 
+const StyledLinkWrapper = styled.div`
+  text-align: center;
+`;
+
 export default function App() {
   return (
     <StyledWrapper>
-      <StyledHeader>Workgrid Rockstar!</StyledHeader>
+      <StyledHeader>Workgrid Rockstar</StyledHeader>
       <div>
-        <Link to={`/`} className="link">
-          Recognize
-        </Link>
-        {" | "}
-        <Link to={`/recognition-app/superfans`} className="link">
-          Superfans
-        </Link>
-        {" | "}
-        <Link to={`/recognition-app/history`} className="link">
-          Recent Recognition
-        </Link>
-        {" | "}
-        <Link to={`/recognition-app/character`} className="link">
-          Company Character
-        </Link>
-      </div>
-      <div>
-        <Switch>
-          <Route path="/recognition-app" exact component={Recognition} />
-          <Route
-            path="/recognition-app/superfans"
-            exact
-            component={SuperFans}
-          />
-          <Route
-            path="/recognition-app/history"
-            exact
-            component={RecentRecognition}
-          />
-          <Route
-            path="/recognition-app/character"
-            exact
-            component={CompanyWordCloud}
-          />
-        </Switch>
+        <StyledLinkWrapper>
+          <Link to={`/`} className="link">
+            Recognize
+          </Link>
+          {" | "}
+          <Link to={`/recognition-app/superfans`} className="link">
+            Superfans
+          </Link>
+          {" | "}
+          <Link to={`/recognition-app/history`} className="link">
+            Recent Recognition
+          </Link>
+          {" | "}
+          <Link to={`/recognition-app/character`} className="link">
+            Company Character
+          </Link>
+        </StyledLinkWrapper>
+        <div>
+          <Switch>
+            <Route path="/recognition-app" exact component={Recognition} />
+            <Route
+              path="/recognition-app/superfans"
+              exact
+              component={SuperFans}
+            />
+            <Route
+              path="/recognition-app/history"
+              exact
+              component={RecentRecognition}
+            />
+            <Route
+              path="/recognition-app/character"
+              exact
+              component={CompanyWordCloud}
+            />
+          </Switch>
+        </div>
       </div>
     </StyledWrapper>
   );

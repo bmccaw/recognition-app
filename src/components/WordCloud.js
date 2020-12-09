@@ -1,6 +1,12 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
 import WordCloud from "wordcloud";
+
+const StyledCanvas = styled.div`
+  margin: 10px auto;
+  text-align: center;
+`;
 
 class CompanyWordCloud extends Component {
   constructor(props) {
@@ -33,10 +39,11 @@ class CompanyWordCloud extends Component {
       WordCloud(this.refs["my-canvas"], {
         list: this.state.wordCloud,
         gridSize: 8,
-        weightFactor: 8,
+        weightFactor: 5,
         fontFamily: "Hiragino Mincho Pro, serif",
         color: "random-dark",
         rotateRatio: 0,
+        rotationSteps: 45,
         backgroundColor: "#f0f0f0",
       });
     });
@@ -44,10 +51,10 @@ class CompanyWordCloud extends Component {
 
   render() {
     return (
-      <div>
+      <StyledCanvas>
         <h2>Your Company Word Cloud</h2>
         <canvas width="1000" height="600" ref="my-canvas"></canvas>
-      </div>
+      </StyledCanvas>
     );
   }
 }
