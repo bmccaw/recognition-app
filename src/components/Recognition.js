@@ -57,7 +57,6 @@ const Recognition = () => {
         console.log("Unknown level ", level);
     }
 
-    // TODO URL should be based on user (currently hard coded)
     fetch(
       `https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/${userId}/recognize`,
       {
