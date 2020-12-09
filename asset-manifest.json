@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/recognition-app/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/recognition-app/static/js/main.e61b1df0.chunk.js",
-    "main.js.map": "/recognition-app/static/js/main.e61b1df0.chunk.js.map",
+    "main.js": "/recognition-app/static/js/main.e46a5879.chunk.js",
+    "main.js.map": "/recognition-app/static/js/main.e46a5879.chunk.js.map",
     "runtime-main.js": "/recognition-app/static/js/runtime-main.8f103052.js",
     "runtime-main.js.map": "/recognition-app/static/js/runtime-main.8f103052.js.map",
     "static/css/2.4b6ec966.chunk.css": "/recognition-app/static/css/2.4b6ec966.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.4b6ec966.chunk.css",
     "static/js/2.fa5b596e.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.e61b1df0.chunk.js"
+    "static/js/main.e46a5879.chunk.js"
   ]
 }
