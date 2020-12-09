@@ -76,7 +76,6 @@ export default function App() {
       "https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/15/recognize",
       {
         method: "POST",
-        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
           Accept: "*/*",
