@@ -50,26 +50,54 @@ export default function App() {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    // TODO: Need to use correct data
-    async function submitRecognition() {
-      const TOKEN =
-        "YjQ4a2syZzc5bGFjNDUxa3RjdGRrc3ZvNzoxOTc0NnNsN3A2cmtyYWp1MWpxcGczZm1haXFpNGkxaHNoaDkzZmFrdWp0aW5ybHZhYWVy";
-      const response = await fetch(
-        "https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/2/recognize",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: { Authorization: `Bearer ${TOKEN}`, "Content-Type": 'application/json' },
-          body: JSON.stringify({
-            "text": "You did a great job!",
-            "imageUrl": "http://clipartmag.com/images/congrats-smiley-faces-25.jpg",
-            "level": 10
-          })
-        }
-      );
-      console.log(response);
+
+    const level = parseInt(data.level, 10);
+    const baseUrl = 'https://bmccaw.github.io/recognition-app/'
+    let imageUrl
+    switch (level) {
+      case 5:
+        imageUrl = `${baseUrl}gratitude.jpg`
+        break
+      case 10:
+        imageUrl = `${baseUrl}cheersforpeers.jpg`
+        break
+      case 20:
+        imageUrl = `${baseUrl}gamechanger.jpg`
+        break
+      case 25:
+        imageUrl = `${baseUrl}raisetheroof.jpg`
+        break
+      default:
+        console.log("Unknown level ", level)
     }
-    submitRecognition();
+
+    // TODO URL should be based on user (currently hard coded)
+    fetch(
+      "https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/15/recognize",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": 'application/json', Accept: '*/*', "Accept-Encoding": 'gzip, deflate, br' },
+        body: JSON.stringify({
+          "text": data.text,
+          "imageUrl": imageUrl,
+          "level": level
+        })
+      }
+    ).then(function(response) {
+      console.log(response);
+      console.log('response.status: ', response.status);
+      console.log('response.ok: ', response.ok);
+      // TODO: response.ok is always false
+      // if (response.ok) {
+      //   alert('Recognition sent!')
+      // } else {
+      //   alert('Response not OK!')
+      // }
+    }).catch(function(error) {
+      console.log(error);
+      alert('Error sending recognition!')
+    })
   }
 
   useEffect(() => {
