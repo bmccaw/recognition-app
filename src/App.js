@@ -3,7 +3,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import Recognition from "./components/Recognition";
 import CompanyWordCloud from "./components/WordCloud";
 import SuperFans from "./components/SuperFans";
-import HistoricRecognition from "./components/HistoricRecognition";
+import RecentRecognition from "./components/RecentRecognition";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
@@ -28,7 +28,7 @@ export default function App() {
         </Link>
         {" | "}
         <Link to={`/recognition-app/history`} className="link">
-          Historic Recognition
+          Recent Recognition
         </Link>
         {" | "}
         <Link to={`/recognition-app/wordcloud`} className="link">
@@ -46,7 +46,7 @@ export default function App() {
           <Route
             path="/recognition-app/history"
             exact
-            component={HistoricRecognition}
+            component={RecentRecognition}
           />
           <Route
             path="/recognition-app/wordcloud"
