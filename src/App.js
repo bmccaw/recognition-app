@@ -23,12 +23,15 @@ export default function App() {
         <Link to={`/`} className="link">
           Recognition
         </Link>
+        {" | "}
         <Link to={`/recognition-app/superfans`} className="link">
           Superfans
         </Link>
+        {" | "}
         <Link to={`/recognition-app/history`} className="link">
           Historic Recognition
         </Link>
+        {" | "}
         <Link to={`/recognition-app/wordmap`} className="link">
           Company Wordmap
         </Link>
