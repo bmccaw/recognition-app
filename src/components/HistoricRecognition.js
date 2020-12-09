@@ -24,6 +24,8 @@ const HistoricRecognition = () => {
     fetchHistory();
   }, []);
   return (
+  <>
+    <h2>Historic Recognition</h2>
     <table className="table">
       <thead>
       <tr>
@@ -46,6 +48,7 @@ const HistoricRecognition = () => {
       })}
       </tbody>
     </table>
+  </>
   );
 };
 

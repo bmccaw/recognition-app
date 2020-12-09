@@ -116,6 +116,7 @@ const Recognition = () => {
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <StyledInputContainer>
+        <h2>Add Recognition</h2>
         <p>Who would you like to recognize?</p>
         <select
           name="userId"

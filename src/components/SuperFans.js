@@ -24,6 +24,8 @@ const SuperFans = () => {
     fetchSuperfans();
   }, []);
   return (
+    <>
+    <h2>Superfans!</h2>
     <table className="table">
       <thead>
       <tr>
@@ -50,6 +52,7 @@ const SuperFans = () => {
       })}
       </tbody>
     </table>
+    </>
   );
 };
 
