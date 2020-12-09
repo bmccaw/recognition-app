@@ -77,9 +77,7 @@ export default function App() {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          Accept: "*/*",
-          "Accept-Encoding": "gzip, deflate, br",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           text: data.text,
@@ -92,12 +90,17 @@ export default function App() {
         console.log(response);
         console.log("response.status: ", response.status);
         console.log("response.ok: ", response.ok);
-        // TODO: response.ok is always false
-        // if (response.ok) {
-        //   alert('Recognition sent!')
-        // } else {
-        //   alert('Response not OK!')
-        // }
+        if (response.ok) {
+          alert('Recognition sent!')
+        } else {
+          return response.json()
+        }
+      })
+      .then((data) => {
+        console.log('data:',data);
+        if (data && data.message) {
+          alert(data.message)
+        }
       })
       .catch(function (error) {
         console.log(error);
