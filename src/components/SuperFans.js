@@ -29,10 +29,10 @@ const SuperFans = () => {
       <tr>
         <th>Rank</th>
         <th>Name</th>
-        <th>Level 1</th>
-        <th>Level 2</th>
-        <th>Level 3</th>
-        <th>Level 4</th>
+        <th>Gratitude</th>
+        <th>Cheers for Peers</th>
+        <th>Game Changer</th>
+        <th>Raise The Roof!</th>
       </tr>
       </thead>
       <tbody>
@@ -41,10 +41,10 @@ const SuperFans = () => {
           <tr key={fan.rank}>
             <td>{fan.rank}</td>
             <td>{fan.name}</td>
-            <td>{fan.level1}</td>
-            <td>{fan.level2}</td>
-            <td>{fan.level3}</td>
-            <td>{fan.level4}</td>
+            <td>{fan.level5}</td>
+            <td>{fan.level10}</td>
+            <td>{fan.level20}</td>
+            <td>{fan.level25}</td>
           </tr>
         );
       })}
