@@ -8,8 +8,8 @@ import reportWebVitals from "./reportWebVitals";
 const routes = (
   <BrowserRouter>
     <Switch>
-      <Route path="/home" component={App} />
-      <Redirect from="/" to="/home" />
+      <Route path="/recognition-app" component={App} />
+      <Redirect from="/" to="/recognition-app" />
     </Switch>
   </BrowserRouter>
 );

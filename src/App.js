@@ -23,22 +23,22 @@ export default function App() {
         <Link to={`/`} className="link">
           Recognition
         </Link>
-        <Link to={`/home/superfans`} className="link">
+        <Link to={`/recognition-app/superfans`} className="link">
           Superfans
         </Link>
-        <Link to={`/home/history`} className="link">
+        <Link to={`/recognition-app/history`} className="link">
           Historic Recognition
         </Link>
-        <Link to={`/home/wordmap`} className="link">
+        <Link to={`/recognition-app/wordmap`} className="link">
           Company Wordmap
         </Link>
       </div>
       <div>
         <Switch>
-          <Route path="/home" exact component={Recognition} />
-          <Route path="/home/superfans" exact component={SuperFans} />
-          <Route path="/home/history" exact component={HistoricRecognition} />
-          <Route path="/home/wordmap" exact component={WordMap} />
+          <Route path="/recognition-app" exact component={Recognition} />
+          <Route path="/recognition-app/superfans" exact component={SuperFans} />
+          <Route path="/recognition-app/history" exact component={HistoricRecognition} />
+          <Route path="/recognition-app/wordmap" exact component={WordMap} />
         </Switch>
       </div>
     </StyledWrapper>
