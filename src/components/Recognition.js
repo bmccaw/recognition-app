@@ -29,6 +29,11 @@ const StyledImage = styled.img`
   height: auto;
 `;
 
+const StyledTextArea = styled.textarea`
+  width: 500px;
+  height: 200px;
+`;
+
 const Recognition = () => {
   const { register, handleSubmit } = useForm();
   const [userData, setUserData] = useState([]);
@@ -132,7 +137,7 @@ const Recognition = () => {
           })}
         </select>
         <p>Tell us why you think they are a rockstar...</p>
-        <textarea
+        <StyledTextArea
           name="text"
           placeholder="Add a message..."
           ref={register({ required: "This input is required." })}

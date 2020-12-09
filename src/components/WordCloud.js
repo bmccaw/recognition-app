@@ -29,6 +29,7 @@ class CompanyWordCloud extends Component {
     }
 
     fetchWordCloudStats().then(() => {
+      console.log(this.state.wordCloud);
       WordCloud(this.refs["my-canvas"], {
         list: this.state.wordCloud,
         gridSize: 8,
@@ -44,8 +45,8 @@ class CompanyWordCloud extends Component {
   render() {
     return (
       <div>
-        <h2>Your Company Recognition Word Cloud</h2>
-        <canvas ref="my-canvas"></canvas>
+        <h2>Your Company Word Cloud</h2>
+        <canvas width="1000" height="600" ref="my-canvas"></canvas>
       </div>
     );
   }

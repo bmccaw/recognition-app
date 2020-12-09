@@ -31,8 +31,8 @@ export default function App() {
           Historic Recognition
         </Link>
         {" | "}
-        <Link to={`/recognition-app/wordcloud`} className="link">
-          Company Wordmap
+        <Link to={`/recognition-app/character`} className="link">
+          Company Character
         </Link>
       </div>
       <div>
@@ -49,7 +49,7 @@ export default function App() {
             component={HistoricRecognition}
           />
           <Route
-            path="/recognition-app/wordcloud"
+            path="/recognition-app/character"
             exact
             component={CompanyWordCloud}
           />
