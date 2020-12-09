@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const HistoricRecognition = () => {
+const RecentRecognition = () => {
   const [historicData, setHistoricData] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const HistoricRecognition = () => {
   }, []);
   return (
   <>
-    <h2>Historic Recognition</h2>
+    <h2>Recent Recognition</h2>
     <table className="table">
       <thead>
       <tr>
@@ -52,4 +52,4 @@ const HistoricRecognition = () => {
   );
 };
 
-export default HistoricRecognition;
+export default RecentRecognition;
