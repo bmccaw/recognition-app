@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/recognition-app/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/recognition-app/static/js/main.19245710.chunk.js",
-    "main.js.map": "/recognition-app/static/js/main.19245710.chunk.js.map",
-    "runtime-main.js": "/recognition-app/static/js/runtime-main.b7d00359.js",
-    "runtime-main.js.map": "/recognition-app/static/js/runtime-main.b7d00359.js.map",
-    "static/js/2.e0da6efb.chunk.js": "/recognition-app/static/js/2.e0da6efb.chunk.js",
-    "static/js/2.e0da6efb.chunk.js.map": "/recognition-app/static/js/2.e0da6efb.chunk.js.map",
-    "static/js/3.38a27ee8.chunk.js": "/recognition-app/static/js/3.38a27ee8.chunk.js",
-    "static/js/3.38a27ee8.chunk.js.map": "/recognition-app/static/js/3.38a27ee8.chunk.js.map",
+    "main.css": "/recognition-app/static/css/main.4a4137e4.chunk.css",
+    "main.js": "/recognition-app/static/js/main.9ea714b8.chunk.js",
+    "main.js.map": "/recognition-app/static/js/main.9ea714b8.chunk.js.map",
+    "runtime-main.js": "/recognition-app/static/js/runtime-main.1b273fe8.js",
+    "runtime-main.js.map": "/recognition-app/static/js/runtime-main.1b273fe8.js.map",
+    "static/js/2.acf28c45.chunk.js": "/recognition-app/static/js/2.acf28c45.chunk.js",
+    "static/js/2.acf28c45.chunk.js.map": "/recognition-app/static/js/2.acf28c45.chunk.js.map",
+    "static/js/3.8450bd2c.chunk.js": "/recognition-app/static/js/3.8450bd2c.chunk.js",
+    "static/js/3.8450bd2c.chunk.js.map": "/recognition-app/static/js/3.8450bd2c.chunk.js.map",
     "index.html": "/recognition-app/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/recognition-app/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.e0da6efb.chunk.js.LICENSE.txt": "/recognition-app/static/js/2.e0da6efb.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/recognition-app/static/media/logo.6ce24c58.svg"
+    "static/css/main.4a4137e4.chunk.css.map": "/recognition-app/static/css/main.4a4137e4.chunk.css.map",
+    "static/js/2.acf28c45.chunk.js.LICENSE.txt": "/recognition-app/static/js/2.acf28c45.chunk.js.LICENSE.txt",
+    "static/media/cheersforpeers.81a4914b.jpg": "/recognition-app/static/media/cheersforpeers.81a4914b.jpg",
+    "static/media/gamechanger.8fb66372.jpg": "/recognition-app/static/media/gamechanger.8fb66372.jpg",
+    "static/media/gratitude.0135e22c.jpg": "/recognition-app/static/media/gratitude.0135e22c.jpg",
+    "static/media/raisetheroof.d804c118.jpg": "/recognition-app/static/media/raisetheroof.d804c118.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b7d00359.js",
-    "static/js/2.e0da6efb.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.19245710.chunk.js"
+    "static/js/runtime-main.1b273fe8.js",
+    "static/js/2.acf28c45.chunk.js",
+    "static/css/main.4a4137e4.chunk.css",
+    "static/js/main.9ea714b8.chunk.js"
   ]
 }
