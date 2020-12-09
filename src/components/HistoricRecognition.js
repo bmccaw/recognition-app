@@ -29,7 +29,7 @@ const HistoricRecognition = () => {
       <tr>
         <th>Name</th>
         <th>Submitted By</th>
-        <th>Level</th>
+        <th>Gift Level</th>
         <th>Text</th>
       </tr>
       </thead>
