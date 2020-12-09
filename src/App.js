@@ -48,7 +48,29 @@ const StyledValidation = styled.p`
 
 export default function App() {
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    // TODO: Need to use correct data
+    async function submitRecognition() {
+      const TOKEN =
+        "YjQ4a2syZzc5bGFjNDUxa3RjdGRrc3ZvNzoxOTc0NnNsN3A2cmtyYWp1MWpxcGczZm1haXFpNGkxaHNoaDkzZmFrdWp0aW5ybHZhYWVy";
+      const response = await fetch(
+        "https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/2/recognize",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { Authorization: `Bearer ${TOKEN}`, "Content-Type": 'application/json' },
+          body: JSON.stringify({
+            "text": "You did a great job!",
+            "imageUrl": "http://clipartmag.com/images/congrats-smiley-faces-25.jpg",
+            "level": 10
+          })
+        }
+      );
+      console.log(response);
+    }
+    submitRecognition();
+  }
 
   useEffect(() => {
     async function fetchUsers() {
