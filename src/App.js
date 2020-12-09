@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
 import styled from "styled-components";
 
 import gratitude from "./assets/gratitude.jpg";
@@ -47,9 +46,12 @@ const StyledValidation = styled.p`
 `;
 
 export default function App() {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
+  const [userData, setUserData] = useState([]);
+
   const onSubmit = (data) => {
     console.log(data);
+    const { userId } = data;
 
     const level = parseInt(data.level, 10);
     const baseUrl = "https://bmccaw.github.io/recognition-app/";
@@ -73,11 +75,11 @@ export default function App() {
 
     // TODO URL should be based on user (currently hard coded)
     fetch(
-      "https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/15/recognize",
+      `https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/${userId}/recognize`,
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           text: data.text,
@@ -91,15 +93,15 @@ export default function App() {
         console.log("response.status: ", response.status);
         console.log("response.ok: ", response.ok);
         if (response.ok) {
-          alert('Recognition sent!')
+          alert("Recognition sent!");
         } else {
-          return response.json()
+          return response.json();
         }
       })
       .then((data) => {
-        console.log('data:',data);
+        console.log("data:", data);
         if (data && data.message) {
-          alert(data.message)
+          alert(data.message);
         }
       })
       .catch(function (error) {
@@ -109,16 +111,23 @@ export default function App() {
   };
 
   useEffect(() => {
-    async function fetchUsers() {
-      await fetch(
-        "https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/",
-        {
-          method: "GET",
-        }
-      )
-        .then((response) => response.json())
-        .then((data) => console.log(data));
-    }
+    const fetchUsers = async () => {
+      try {
+        const result = await fetch(
+          `https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/`,
+          {
+            method: `GET`,
+          }
+        );
+
+        const body = await result.json();
+        console.log(body);
+        setUserData(body);
+      } catch (err) {
+        console.log(err);
+        return null;
+      }
+    };
     fetchUsers();
   }, []);
 
@@ -128,44 +137,24 @@ export default function App() {
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
         <StyledInputContainer>
           <p>Who would you like to recognize?</p>
-          <input
-            type="text"
-            placeholder="Recipient Email"
-            name="RecipientEmail"
-            ref={register({
-              required: "This input is required.",
-              pattern: /^\S+@\S+$/i,
+          <select
+            name="userId"
+            id="userId"
+            ref={register({ required: "This input is required." })}
+          >
+            {userData.map((user) => {
+              return (
+                <option name="user" key={user.id} value={user.id}>
+                  {user.name}
+                </option>
+              );
             })}
-          />
-          <ErrorMessage
-            errors={errors}
-            name="RecipientEmail"
-            render={({ messages }) => {
-              console.log("messages", messages);
-              return messages
-                ? Object.entries(messages).map(([type, message]) => (
-                    <StyledValidation key={type}>{message}</StyledValidation>
-                  ))
-                : null;
-            }}
-          />
+          </select>
           <p>Tell us why you think they are a rockstar...</p>
           <textarea
             name="text"
             placeholder="Add a message..."
             ref={register({ required: "This input is required." })}
-          />
-          <ErrorMessage
-            errors={errors}
-            name="text"
-            render={({ messages }) => {
-              console.log("messages", messages);
-              return messages
-                ? Object.entries(messages).map(([type, message]) => (
-                    <StyledValidation key={type}>{message}</StyledValidation>
-                  ))
-                : null;
-            }}
           />
         </StyledInputContainer>
         <StyledRadioContainer>
