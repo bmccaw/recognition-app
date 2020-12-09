@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/recognition-app/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/recognition-app/static/js/main.5b56838f.chunk.js",
-    "main.js.map": "/recognition-app/static/js/main.5b56838f.chunk.js.map",
+    "main.js": "/recognition-app/static/js/main.95001612.chunk.js",
+    "main.js.map": "/recognition-app/static/js/main.95001612.chunk.js.map",
     "runtime-main.js": "/recognition-app/static/js/runtime-main.099f078c.js",
     "runtime-main.js.map": "/recognition-app/static/js/runtime-main.099f078c.js.map",
-    "static/js/2.96e1a180.chunk.js": "/recognition-app/static/js/2.96e1a180.chunk.js",
-    "static/js/2.96e1a180.chunk.js.map": "/recognition-app/static/js/2.96e1a180.chunk.js.map",
+    "static/js/2.e7bff009.chunk.js": "/recognition-app/static/js/2.e7bff009.chunk.js",
+    "static/js/2.e7bff009.chunk.js.map": "/recognition-app/static/js/2.e7bff009.chunk.js.map",
     "static/js/3.18f2844d.chunk.js": "/recognition-app/static/js/3.18f2844d.chunk.js",
     "static/js/3.18f2844d.chunk.js.map": "/recognition-app/static/js/3.18f2844d.chunk.js.map",
     "index.html": "/recognition-app/index.html",
     "static/css/main.4a4137e4.chunk.css.map": "/recognition-app/static/css/main.4a4137e4.chunk.css.map",
-    "static/js/2.96e1a180.chunk.js.LICENSE.txt": "/recognition-app/static/js/2.96e1a180.chunk.js.LICENSE.txt",
+    "static/js/2.e7bff009.chunk.js.LICENSE.txt": "/recognition-app/static/js/2.e7bff009.chunk.js.LICENSE.txt",
     "static/media/cheersforpeers.81a4914b.jpg": "/recognition-app/static/media/cheersforpeers.81a4914b.jpg",
     "static/media/gamechanger.8fb66372.jpg": "/recognition-app/static/media/gamechanger.8fb66372.jpg",
     "static/media/gratitude.0135e22c.jpg": "/recognition-app/static/media/gratitude.0135e22c.jpg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.099f078c.js",
-    "static/js/2.96e1a180.chunk.js",
+    "static/js/2.e7bff009.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.5b56838f.chunk.js"
+    "static/js/main.95001612.chunk.js"
   ]
 }
