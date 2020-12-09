@@ -20,7 +20,7 @@ export default function App() {
       <StyledHeader>Workgrid Rockstar!</StyledHeader>
       <div>
         <Link to={`/`} className="link">
-          Recognition
+          Recognize
         </Link>
         {" | "}
         <Link to={`/recognition-app/superfans`} className="link">
