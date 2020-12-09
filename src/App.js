@@ -52,23 +52,23 @@ export default function App() {
     console.log(data);
 
     const level = parseInt(data.level, 10);
-    const baseUrl = 'https://bmccaw.github.io/recognition-app/'
-    let imageUrl
+    const baseUrl = "https://bmccaw.github.io/recognition-app/";
+    let imageUrl;
     switch (level) {
       case 5:
-        imageUrl = `${baseUrl}gratitude.jpg`
-        break
+        imageUrl = `${baseUrl}gratitude.jpg`;
+        break;
       case 10:
-        imageUrl = `${baseUrl}cheersforpeers.jpg`
-        break
+        imageUrl = `${baseUrl}cheersforpeers.jpg`;
+        break;
       case 20:
-        imageUrl = `${baseUrl}gamechanger.jpg`
-        break
+        imageUrl = `${baseUrl}gamechanger.jpg`;
+        break;
       case 25:
-        imageUrl = `${baseUrl}raisetheroof.jpg`
-        break
+        imageUrl = `${baseUrl}raisetheroof.jpg`;
+        break;
       default:
-        console.log("Unknown level ", level)
+        console.log("Unknown level ", level);
     }
 
     // TODO URL should be based on user (currently hard coded)
@@ -77,42 +77,45 @@ export default function App() {
       {
         method: "POST",
         mode: "no-cors",
-        headers: { "Content-Type": 'application/json', Accept: '*/*', "Accept-Encoding": 'gzip, deflate, br' },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "*/*",
+          "Accept-Encoding": "gzip, deflate, br",
+        },
         body: JSON.stringify({
-          "text": data.text,
-          "imageUrl": imageUrl,
-          "level": level
-        })
+          text: data.text,
+          imageUrl: imageUrl,
+          level: level,
+        }),
       }
-    ).then(function(response) {
-      console.log(response);
-      console.log('response.status: ', response.status);
-      console.log('response.ok: ', response.ok);
-      // TODO: response.ok is always false
-      // if (response.ok) {
-      //   alert('Recognition sent!')
-      // } else {
-      //   alert('Response not OK!')
-      // }
-    }).catch(function(error) {
-      console.log(error);
-      alert('Error sending recognition!')
-    })
-  }
+    )
+      .then(function (response) {
+        console.log(response);
+        console.log("response.status: ", response.status);
+        console.log("response.ok: ", response.ok);
+        // TODO: response.ok is always false
+        // if (response.ok) {
+        //   alert('Recognition sent!')
+        // } else {
+        //   alert('Response not OK!')
+        // }
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert("Error sending recognition!");
+      });
+  };
 
   useEffect(() => {
     async function fetchUsers() {
-      const TOKEN =
-        "YjQ4a2syZzc5bGFjNDUxa3RjdGRrc3ZvNzoxOTc0NnNsN3A2cmtyYWp1MWpxcGczZm1haXFpNGkxaHNoaDkzZmFrdWp0aW5ybHZhYWVy";
-      const response = await fetch(
+      await fetch(
         "https://yfvnkbux6j.execute-api.us-east-1.amazonaws.com/users/",
         {
           method: "GET",
-          mode: "no-cors",
-          headers: { Authorization: `Bearer ${TOKEN}` },
         }
-      );
-      console.log(response);
+      )
+        .then((response) => response.json())
+        .then((data) => console.log(data));
     }
     fetchUsers();
   }, []);

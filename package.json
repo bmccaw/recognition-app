@@ -14,7 +14,8 @@
     "react-hook-form": "^6.12.2",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "wordcloud": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
