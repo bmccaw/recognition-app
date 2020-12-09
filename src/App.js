@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import Recognition from "./components/Recognition";
 import SuperFans from "./components/SuperFans";
+import HistoricRecognition from "./components/HistoricRecognition";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
@@ -12,7 +13,6 @@ const StyledHeader = styled.h1`
   text-align: center;
 `;
 
-const HistoricRecognition = () => <div>Historic recognition!</div>;
 const WordMap = () => <div>Company Wordmap!</div>;
 
 export default function App() {
