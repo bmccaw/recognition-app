@@ -16,6 +16,14 @@ const StyledHeader = styled.h1`
 
 const StyledLinkWrapper = styled.div`
   text-align: center;
+  a {
+    color: #3066b1;
+    text-decoration: none;
+    :hover,
+    focus {
+      color: #0053ba;
+    }
+  }
 `;
 
 export default function App() {

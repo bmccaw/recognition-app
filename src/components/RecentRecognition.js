@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+import thumbsUp from "../assets/thumbs-up.png";
+
 const StyledWrapper = styled.div`
   margin-top: 10px;
+`;
+
+const StyledImage = styled.img`
+  width: 40px;
+  padding: 10px;
 `;
 
 const RecentRecognition = () => {
@@ -38,6 +45,7 @@ const RecentRecognition = () => {
             <th>Submitted By</th>
             <th>Gift Level</th>
             <th>Text</th>
+            <th>Likes</th>
           </tr>
         </thead>
         <tbody>
@@ -48,6 +56,9 @@ const RecentRecognition = () => {
                 <td>{history.submittedBy}</td>
                 <td>{history.level}</td>
                 <td>{history.text}</td>
+                <td>
+                  <StyledImage src={thumbsUp} />
+                </td>
               </tr>
             );
           })}

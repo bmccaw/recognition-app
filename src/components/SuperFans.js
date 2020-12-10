@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+import thumbsUp from "../assets/thumbs-up.png";
+
 const StyledWrapper = styled.div`
   margin-top: 10px;
+`;
+
+const StyledImage = styled.img`
+  width: 40px;
+  padding: 10px;
 `;
 
 const SuperFans = () => {
@@ -40,6 +47,7 @@ const SuperFans = () => {
             <th>Cheers for Peers</th>
             <th>Game Changer</th>
             <th>Raise The Roof!</th>
+            <th>Likes</th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +60,9 @@ const SuperFans = () => {
                 <td>{fan.level10}</td>
                 <td>{fan.level20}</td>
                 <td>{fan.level25}</td>
+                <td>
+                  <StyledImage src={thumbsUp} />
+                </td>
               </tr>
             );
           })}

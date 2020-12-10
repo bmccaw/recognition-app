@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00e3b91d-fe35-4c25-9383-c0e4cf2b6168" name="Default Changelist" comment="Changed size of word cloud and text area">
+    <list default="true" id="00e3b91d-fe35-4c25-9383-c0e4cf2b6168" name="Default Changelist" comment="Some additional styling updates">
+      <change afterPath="$PROJECT_DIR$/src/assets/thumbs-up.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/RecentRecognition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecentRecognition.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Recognition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recognition.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SuperFans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperFans.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WordCloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WordCloud.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607370285141</updated>
-      <workItem from="1607370287087" duration="53600000" />
+      <workItem from="1607370287087" duration="56326000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607371114753</created>
@@ -115,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607548828940</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Some styling updates">
+      <created>1607555153265</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607555153266</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +136,8 @@
     <MESSAGE value="Added react-router links" />
     <MESSAGE value="Word cloud added" />
     <MESSAGE value="Changed size of word cloud and text area" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed size of word cloud and text area" />
+    <MESSAGE value="Some styling updates" />
+    <MESSAGE value="Some additional styling updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some additional styling updates" />
   </component>
 </project>

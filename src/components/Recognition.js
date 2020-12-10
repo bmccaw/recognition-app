@@ -31,6 +31,7 @@ const StyledRadioContainer = styled.div`
 const StyledImage = styled.img`
   width: 70px;
   height: auto;
+  padding: 5px;
 `;
 
 const StyledSelect = styled.select`
@@ -40,6 +41,28 @@ const StyledSelect = styled.select`
 const StyledTextArea = styled.textarea`
   width: 500px;
   height: 200px;
+`;
+
+const StyledLevel = styled.div`
+  padding: 10px;
+  border: 1px solid #3066b1;
+`;
+
+const StyledSubmit = styled.input`
+  background: #3066b1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  :hover,
+  focus {
+    background: #0053ba;
+  }
 `;
 
 const Recognition = () => {
@@ -153,47 +176,55 @@ const Recognition = () => {
       </StyledInputContainer>
       <StyledRadioContainer>
         <p>Select your gift level...</p>
-        <input
-          type="radio"
-          id="Starbucks"
-          name="level"
-          value="5"
-          ref={register({ required: true })}
-        />
-        <StyledImage src={gratitude} />
-        <label for="5">Gratitude: $5 Starbucks Gift Card</label>
+        <StyledLevel>
+          <input
+            type="radio"
+            id="Starbucks"
+            name="level"
+            value="5"
+            ref={register({ required: true })}
+          />
+          <StyledImage src={gratitude} />
+          <label for="5">Gratitude: $5 Starbucks Gift Card</label>
+        </StyledLevel>
         <p />
-        <input
-          type="radio"
-          id="Starbucks"
-          name="level"
-          value="10"
-          ref={register({ required: true })}
-        />
-        <StyledImage src={cheersforpeers} />
-        <label for="10">Cheers for Peers: $10 Starbucks Gift Card</label>
+        <StyledLevel>
+          <input
+            type="radio"
+            id="Starbucks"
+            name="level"
+            value="10"
+            ref={register({ required: true })}
+          />
+          <StyledImage src={cheersforpeers} />
+          <label for="10">Cheers for Peers: $10 Starbucks Gift Card</label>
+        </StyledLevel>
         <p />
-        <input
-          type="radio"
-          id="Amazon"
-          name="level"
-          value="20"
-          ref={register({ required: true })}
-        />
-        <StyledImage src={gamechanger} />
-        <label for="20">Game Changer: $20 Amazon Gift Card</label>
+        <StyledLevel>
+          <input
+            type="radio"
+            id="Amazon"
+            name="level"
+            value="20"
+            ref={register({ required: true })}
+          />
+          <StyledImage src={gamechanger} />
+          <label for="20">Game Changer: $20 Amazon Gift Card</label>
+        </StyledLevel>
         <p />
-        <input
-          type="radio"
-          id="Amazon"
-          name="level"
-          value="25"
-          ref={register({ required: true })}
-        />
-        <StyledImage src={raisetheroof} />
-        <label for="25">Raise the Roof: $25 Amazon Gift Card</label>
+        <StyledLevel>
+          <input
+            type="radio"
+            id="Amazon"
+            name="level"
+            value="25"
+            ref={register({ required: true })}
+          />
+          <StyledImage src={raisetheroof} />
+          <label for="25">Raise the Roof: $25 Amazon Gift Card</label>
+        </StyledLevel>
         <p />
-        <input type="submit" />
+        <StyledSubmit type="submit" />
       </StyledRadioContainer>
     </StyledForm>
   );
