@@ -52,7 +52,7 @@ class CompanyWordCloud extends Component {
   render() {
     return (
       <StyledCanvas>
-        <h2>Your Company Word Cloud</h2>
+        <h2>How we are defined</h2><h5>(POWERED BY ROCKSTAR AI)</h5>
         <canvas width="1000" height="600" ref="my-canvas"></canvas>
       </StyledCanvas>
     );
